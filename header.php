@@ -24,7 +24,7 @@ require_once 'config.php';
                 
                 <?php if ($_SESSION['user_role'] === 'admin'): ?>
                     <a href="admin.php" class="btn btn-sm btn-secondary">Admin Panel</a>
-                    <a href="index.php" class="btn btn-sm btn-secondary">udash</a>
+                    <a href="index.php" class="btn btn-sm btn-secondary">Floor Status</a>
                 <?php endif; ?>
 
                 <a href="logout.php" class="btn btn-sm btn-danger">Logout</a>

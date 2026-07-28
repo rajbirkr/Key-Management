@@ -66,7 +66,7 @@ include 'header.php';
             <label for="role">Role</label>
             <select name="role" id="role" class="form-control">
                 <option value="user">Student / User</option>
-                <option value="admin">Administrator</option>
+                <!-- <option value="admin">Administrator</option> -->
             </select>
         </div>
 
