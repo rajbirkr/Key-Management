@@ -1,0 +1,12 @@
+.env
+vendor/
+node_modules/
+*.log
+*.cache
+*.tmp
+.DS_Store
+.vscode/
+.env.local
+.env.*.local
+.vercel/
+vercel.json
