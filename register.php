@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once __DIR__ . '/includes/config.php';
 
 if (isset($_SESSION['user_id'])) {
     header("Location: index.php");
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-include 'header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
 <div class="auth-box">
@@ -52,7 +52,7 @@ include 'header.php';
     <?php if (!empty($success_message)): ?>
         <div class="alert alert-success">
             <?php echo $success_message; ?>
-            <p style="margin-top: 8px;"><a href="login.php" style="color: #10b981; font-weight: bold;">Click here to Login</a></p>
+            <p style="margin-top: 8px;"><a href="/Key-Management-main/login.php" style="color: #10b981; font-weight: bold;">Click here to Login</a></p>
         </div>
     <?php endif; ?>
 
@@ -61,7 +61,7 @@ include 'header.php';
             <label for="role">Select Role</label>
             <select name="role" id="role" class="form-control">
                 <option value="user">Student / User</option>
-                <!-- <option value="admin">Administrator</option> -->
+                <option value="admin">Administrator</option>
             </select>
         </div>
 
@@ -89,8 +89,8 @@ include 'header.php';
     </form>
 
     <div style="margin-top: 20px; text-align: center; font-size: 13px; color: #94a3b8;">
-        Already registered? <a href="login.php" style="color: #6366f1; text-decoration: none; font-weight: bold;">Login here</a>
+        Already registered? <a href="/Key-Management-main/login.php" style="color: #6366f1; text-decoration: none; font-weight: bold;">Login here</a>
     </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

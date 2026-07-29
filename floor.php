@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once __DIR__ . '/includes/config.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
@@ -71,11 +71,11 @@ $base = $floor_id * 100;
 $classrooms = [$base + 1, $base + 2, $base + 3, $base + 4];
 $laboratories = [$base + 21, $base + 22, $base + 23, $base +24,$base +25];
 
-include 'header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
 <div style="margin-bottom: 20px;">
-    <a href="index.php" style="color: #6366f1; text-decoration: none; font-size: 13px; font-weight: bold;">&larr; Back to Dashboard</a>
+    <a href="/Key-Management-main/index.php" style="color: #6366f1; text-decoration: none; font-size: 13px; font-weight: bold;">&larr; Back to Dashboard</a>
     <h1 style="font-size: 26px; color: #ffffff; margin-top: 10px;"><?php echo htmlspecialchars($floor['floor_name']); ?></h1>
     <p style="color: #94a3b8; font-size: 14px;"><?php echo htmlspecialchars($floor['description']); ?></p>
 </div>
@@ -156,4 +156,4 @@ include 'header.php';
     </form>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

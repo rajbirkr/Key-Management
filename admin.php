@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once __DIR__ . '/includes/config.php';
 
 // Ensure user is logged in and is an Admin
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
@@ -89,7 +89,7 @@ $all_bookings_res = mysqli_query($conn, $all_bookings_sql);
 $all_keys_sql = "SELECT k.*, f.floor_name FROM key_status k JOIN floors f ON k.floor_id = f.id ORDER BY f.id ASC, k.room_number ASC";
 $all_keys_res = mysqli_query($conn, $all_keys_sql);
 
-include 'header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
 <div style="margin-bottom: 25px;">
@@ -202,4 +202,4 @@ include 'header.php';
     <?php endif; ?>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

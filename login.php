@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once __DIR__ . '/includes/config.php';
 
 // Redirect if already logged in
 if (isset($_SESSION['user_id'])) {
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-include 'header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
 <div class="auth-box">
@@ -84,7 +84,7 @@ include 'header.php';
     </form>
 
     <div style="margin-top: 20px; text-align: center; font-size: 13px; color: #94a3b8;">
-        Don't have an account? <a href="register.php" style="color: #6366f1; text-decoration: none; font-weight: bold;">Register here</a>
+        Don't have an account? <a href="/Key-Management-main/register.php" style="color: #6366f1; text-decoration: none; font-weight: bold;">Register here</a>
     </div>
 
     <!-- Demo Credentials box -->
@@ -95,4 +95,4 @@ include 'header.php';
     </div> -->
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

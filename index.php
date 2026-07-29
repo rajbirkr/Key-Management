@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once __DIR__ . '/includes/config.php';
 
 // Auth check
 if (!isset($_SESSION['user_id'])) {
@@ -32,7 +32,7 @@ $floors_result = mysqli_query($conn, $floors_sql);
 $bookings_sql = "SELECT b.*, f.floor_name FROM bookings b JOIN floors f ON b.floor_id = f.id WHERE b.user_phone = '$user_phone' ORDER BY b.id DESC";
 $bookings_result = mysqli_query($conn, $bookings_sql);
 
-include 'header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
 <!-- Welcome Banner -->
@@ -136,4 +136,4 @@ include 'header.php';
     <?php endif; ?>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>
