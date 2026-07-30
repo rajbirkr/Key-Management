@@ -1,5 +1,5 @@
 ========================================================================
-   ATLAS HUB - Campus Space Manager (Beginner PHP + MySQL + HTML/CSS/JS)
+  KeyPoint Campus - Campus Space Manager (Beginner PHP + MySQL + HTML/CSS/JS)
 ========================================================================
 
 FILES INCLUDED IN THIS PROJECT:
